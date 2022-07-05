@@ -5,7 +5,7 @@ main{
     --main-colo-red: red;
     --main-color-blue: blue;
     --main-fonts-size-p: 16px;
-    --main-fonts-size-h3: 30px;
+    --main-fonts-size-h3: 35px;
     --main-fonts-size-h4: 25px;
 } 
 @media (min-width:992px){
@@ -75,7 +75,7 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease;
     position: fixed;
     left:  10%;
     z-index: 1;
@@ -126,6 +126,7 @@ right: 5%;
 .contacts__link {
     font-size: 20px;
     color: var(--main-color-bleck);
+    padding: 5px 0;
 }
 .contacts__link:hover{
     color: var(--main-colo-red);
@@ -135,6 +136,9 @@ right: 5%;
 .contacts__form{
     width: 90%;
     padding: 0 10px;
+}
+.contacts__form-item:last-child{
+    padding-top: 15px;
 }
 .contacts__form-item button{
     padding: 15px 20px;
@@ -546,7 +550,7 @@ right: 5%;
     position: relative;
     left: -640px;
     display: none;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease;
 }
 .header__nav--acetive{ 
     text-transform: uppercase;
@@ -566,7 +570,7 @@ right: 5%;
 
 }
 .header__nav-link{
-    width: 100%;
+    width: 60%;
 }
 .header__nav-link:hover{
     background-color: #a6b4af;
@@ -624,9 +628,10 @@ right: 5%;
 }
 .entry__subtitle{
     padding-top: 20px;
-    font-size: 25px;
-    color: var(--main-colo-red);
+    font-size: 30px;
+    color: var(--main-color-bleck);
     text-align: center;
+    font-weight: bold;
 }
 .entry--block-element{
     color: var(--main-color-bleck);
@@ -730,7 +735,8 @@ display: flex;
 .cistern--wrapper,
 .truck--wrapper,
 .trust--wrapper,
-.contacts--wrapper
+.contacts--wrapper,
+.social--wrapper
 {
     justify-content: center;
     flex-direction: column;
@@ -744,7 +750,7 @@ display: flex;
     margin-left: 20px;
 }
 .products__li{
-    font-size: 20px;
+    font-size: 15px;
 }
 .products__block{
     display: flex;
@@ -774,7 +780,7 @@ display: flex;
     height: 100vh; 
 }
 .cistern{
-    background-image: url(/img/IMG_0102.JPG);
+    background-image: url(/img/cisterna1.jpg);
     position: relative;
    
 }
@@ -858,7 +864,7 @@ display: flex;
     flex-direction: column;
 }
 /*-- contacts --*/
-.contacts{
+.contacts, .footer{
     background-color: #d7d7d7;
 }
 .contacts__item {
@@ -887,6 +893,7 @@ display: flex;
 .contacts--wrapper{
     flex-direction: column;
     background-color: #d7d7d7;
+    padding-bottom: 20px;
 }
 .contacts__form-input {
     font-size: 18px;
@@ -911,12 +918,50 @@ display: flex;
 .contacts__subtitle {
     font-size: 20px;
 }
+.cosial__block{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.social__block-logo{
+    width: 100px;
+    padding: 5px;
+    position: absolute;
+    margin-bottom: 10px;
+}
+.social__block-link{
+    display: flex;
+    justify-content: center;
+}
+.social__inst{
+right: 40px;
+}
+.social__face{
+    left: 40px;
+}
+.social__block-logo:hover{
+    border: 1px solid #000000;
+    padding: 8px;
+    width: 32%;
+    transition: all .2s ease;
+    height: 105px;
+    width: 105px;
+}
+.footer{
+    margin-top: 130px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.footer--wrapper{
+    justify-content: center;
+    flex-direction: column;
+}
 /*--- Desctop size --*/
 @media (min-width:992px) {
     .main{
         --main-fonts-size-p: 25px;
         --main-fonts-size-h3: 45px;
-        --main-fonts-size-h4: 35px;
+        --main-fonts-size-h4: 40px;
     }
     
     .products,
@@ -939,13 +984,35 @@ display: flex;
     h4{
         font-size: var(--main-fonts-size-h4);
     }
-    .entry__subtitle{
+    .entry__subtitle,.footer__sybtititle{
         font-size: 40px;
     }
     .products__li{
-        font-size: 26px;
+        font-size: 20px;
     }
     .trust__img{
      width: 1;
     }  
+    .social__block-logo{
+       width: 125px;
+    }
+    .social__inst{
+        right: 80px;
+        }
+    .social__face{
+        left: 80px;
+        }
+    .social__block-logo:hover{
+        border: 1px solid #000000;
+        padding: 8px;
+        width: 32%;
+        transition: all .2s ease;
+        height: 130px;
+        width: 130px;
+    }
+    .footer{
+        margin-top: 150px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
 }
